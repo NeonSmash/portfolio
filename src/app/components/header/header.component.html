@@ -1,0 +1,31 @@
+<header class="header">
+  <div class="header-container">
+    <div class="logo">
+      <a routerLink="/">
+        <span class="logo-text">Portfolio</span>
+      </a>
+    </div>
+
+    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle navigation menu">
+      <span class="menu-icon" [class.open]="isMenuOpen">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </span>
+    </button>
+
+    <nav class="nav-menu" [class.open]="isMenuOpen">
+      <ul class="nav-list">
+        <li *ngFor="let item of menuItems" class="nav-item">
+          <a [routerLink]="item.url" 
+             routerLinkActive="active" 
+             [routerLinkActiveOptions]="{exact: item.url === '/'}"
+             (click)="closeMenu()">
+            <i [class]="item.icon"></i>
+            <span>{{ item.name }}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header> 

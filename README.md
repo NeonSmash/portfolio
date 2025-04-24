@@ -1,59 +1,62 @@
-# MyAngularApp
+# My Angular App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+A modern, responsive Angular application with a clean and professional design.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- Responsive design that works on all devices
+- Modern UI with animations and transitions
+- Header with navigation menu
+- Footer with social links and quick navigation
+- Homepage with hero section, features, about, testimonials, and CTA
+- Built with Angular 17+ and standalone components
 
-```bash
-ng serve
-```
+## Getting Started
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Prerequisites
 
-## Code scaffolding
+- Node.js (v18.0.0 or later)
+- npm (v9.0.0 or later)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Installation
 
-```bash
-ng generate component component-name
-```
+1. Clone the repository
+   ```
+   git clone https://github.com/yourusername/my-angular-app.git
+   ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+2. Navigate to the project directory
+   ```
+   cd my-angular-app
+   ```
 
-```bash
-ng generate --help
-```
+3. Install dependencies
+   ```
+   npm install
+   ```
 
-## Building
+4. Start the development server
+   ```
+   ng serve
+   ```
 
-To build the project run:
+5. Open your browser and navigate to `http://localhost:4200`
 
-```bash
-ng build
-```
+## Project Structure
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- `src/app/components/` - Contains all the components
+  - `header/` - Header component with navigation
+  - `footer/` - Footer component with social links
+  - `home/` - Homepage component
+- `src/assets/` - Contains images and other static assets
+- `src/app/app.routes.ts` - Application routes
 
-## Running unit tests
+## Customization
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- Update the content in the components to match your needs
+- Modify the styles in the SCSS files to change the appearance
+- Add new components as needed
 
-```bash
-ng test
-```
+## License
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This project is licensed under the MIT License - see the LICENSE file for details.
