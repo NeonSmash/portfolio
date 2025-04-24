@@ -1,0 +1,221 @@
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$accent-color: #e74c3c;
+$light-color: #ecf0f1;
+$dark-color: #2c3e50;
+$text-color: #333;
+$light-text: #ecf0f1;
+$border-radius: 4px;
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$transition: all 0.3s ease;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+// Global styles
+.container {
+  @include container;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: $secondary-color;
+  font-size: 2.5rem;
+  position: relative;
+  
+  &:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: $primary-color;
+    margin: 1rem auto;
+    border-radius: 2px;
+  }
+}
+
+.section-description {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  color: $text-color;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: $border-radius;
+  font-weight: 600;
+  text-decoration: none;
+  transition: $transition;
+  cursor: pointer;
+  border: none;
+  
+  &-primary {
+    background-color: $primary-color;
+    color: $light-text;
+    
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// Contact section
+.contact-section {
+  padding: 5rem 0;
+  background-color: #f9f9f9;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Contact info
+.contact-info {
+  background-color: $secondary-color;
+  color: $light-text;
+  padding: 2rem;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    
+    i {
+      font-size: 1.5rem;
+      color: $primary-color;
+      margin-right: 1rem;
+      margin-top: 0.25rem;
+    }
+    
+    h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.2rem;
+    }
+    
+    p {
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba($light-text, 0.1);
+      color: $light-text;
+      border-radius: 50%;
+      transition: $transition;
+      
+      &:hover {
+        background-color: $primary-color;
+        transform: translateY(-3px);
+      }
+      
+      i {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+// Contact form
+.contact-form-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+}
+
+.contact-form {
+  .form-group {
+    margin-bottom: 1.5rem;
+    
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: $secondary-color;
+    }
+    
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: $border-radius;
+      font-size: 1rem;
+      transition: $transition;
+      
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+        box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
+      }
+      
+      &.is-invalid {
+        border-color: $accent-color;
+      }
+    }
+    
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    
+    .invalid-feedback {
+      color: $accent-color;
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+    }
+  }
+  
+  .alert {
+    padding: 1rem;
+    border-radius: $border-radius;
+    margin-top: 1rem;
+    
+    &-success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    
+    &-danger {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+  }
+} 
