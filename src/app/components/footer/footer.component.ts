@@ -13,10 +13,10 @@ export class FooterComponent {
   currentYear = new Date().getFullYear();
   
   socialLinks = [
-    { name: 'Facebook', url: '#', icon: 'fab fa-facebook' },
-    { name: 'Github', url: '#', icon: 'fab fa-github' },
-    { name: 'Instagram', url: '#', icon: 'fab fa-instagram' },
-    { name: 'LinkedIn', url: '#', icon: 'fab fa-linkedin' }
+    { name: 'Facebook', url: 'https://www.facebook.com/beleczky.ferenc', icon: 'fab fa-facebook' },
+    { name: 'Github', url: 'https://github.com/NeonSmash', icon: 'fab fa-github' },
+    { name: 'Instagram', url: 'https://www.instagram.com/extravagans_gepsarkanyok/', icon: 'fab fa-instagram' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/beleczky-ferenc/', icon: 'fab fa-linkedin' }
   ];
 
   footerLinks = [

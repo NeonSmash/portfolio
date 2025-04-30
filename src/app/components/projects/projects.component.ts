@@ -12,8 +12,8 @@ import { RouterModule } from '@angular/router';
 export class ProjectsComponent {
   projects = [
     {
-      title: 'E-commerce Website',
-      description: 'A full-featured e-commerce platform with product management, shopping cart, and payment integration.',
+      title: 'Budget Management App',
+      description: 'A full-featured budget management app with expense tracking, budget planning, and financial reports.',
       image: 'assets/images/project-1.jpg',
       technologies: ['Angular', 'Node.js', 'MongoDB', 'Stripe'],
       link: '#'
