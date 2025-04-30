@@ -9,7 +9,7 @@
           <i class="fas fa-map-marker-alt"></i>
           <div>
             <h3>Location</h3>
-            <p>New York, NY, USA</p>
+            <p>Hungary, Budapest, 8600 Siófok, Koch Róbert u. 17.</p>
           </div>
         </div>
         
@@ -17,7 +17,7 @@
           <i class="fas fa-envelope"></i>
           <div>
             <h3>Email</h3>
-            <p>contact&#64;example.com</p>
+            <p>beleczky.feri&#64;gmail.com</p>
           </div>
         </div>
         
@@ -25,15 +25,15 @@
           <i class="fas fa-phone"></i>
           <div>
             <h3>Phone</h3>
-            <p>+1 (123) 456-7890</p>
+            <p>+36 (30) 737 0679</p>
           </div>
         </div>
         
         <div class="social-links">
-          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+          <a href="https://www.facebook.com/beleczky.ferenc" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/extravagans_gepsarkanyok/" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/beleczky-ferenc/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/NeonSmash" class="social-link"><i class="fab fa-github"></i></a>
         </div>
       </div>
       
@@ -100,11 +100,11 @@
           </div>
           
           <div *ngIf="success" class="alert alert-success">
-            Your message has been sent successfully!
+            Message sent successfully!
           </div>
           
-          <div *ngIf="error && submitted" class="alert alert-danger">
-            Please check the form for errors.
+          <div *ngIf="error" class="alert alert-danger">
+            {{ errorMessage }}
           </div>
         </form>
       </div>

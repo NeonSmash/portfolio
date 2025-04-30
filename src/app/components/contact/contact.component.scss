@@ -70,7 +70,7 @@ $transition: all 0.3s ease;
     color: $light-text;
     
     &:hover {
-      background-color: darken($primary-color, 10%);
+      background-color: color-mix(in srgb, $primary-color, black 10%);
       transform: translateY(-2px);
     }
   }
@@ -203,8 +203,8 @@ $transition: all 0.3s ease;
   
   .alert {
     padding: 1rem;
-    border-radius: $border-radius;
     margin-top: 1rem;
+    border-radius: $border-radius;
     
     &-success {
       background-color: #d4edda;
