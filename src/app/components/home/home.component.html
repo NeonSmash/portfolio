@@ -1,0 +1,76 @@
+<section class="hero">
+  <div class="hero-content hero-flex hero-vertical">
+    <img src="assets/images/profil.jpg" alt="Profile picture" class="hero-profile-img">
+    <div>
+      <h1>Welcome to my Portfolio</h1>
+      <p>I create beautiful, functional websites that help businesses grow and succeed in the digital age.</p>
+      <div class="hero-buttons">
+        <a routerLink="/projects" class="btn btn-primary">My Projects</a>
+        <a routerLink="/contact" class="btn btn-secondary">Contact Me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container">
+    <h2 class="section-title">What I Offer</h2>
+    <div class="features-grid">
+      <div *ngFor="let feature of features" class="feature-card">
+        <div class="feature-icon">
+          <i [class]="feature.icon"></i>
+        </div>
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-preview">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>I am a software developer with a passion for creating beautiful and functional websites.</p>
+        <p>My approach combines creativity with technical expertise to deliver solutions that meet my clients' needs and exceed their expectations.</p>
+        <a routerLink="/about" class="btn btn-outline">Learn More</a>
+      </div>
+      <div class="about-image">
+        <img src="assets/images/rolam2.jpg" alt="Me at work">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <h2 class="section-title">What My Clients Say</h2>
+    <div class="testimonials-slider">
+      <div *ngFor="let testimonial of testimonials" class="testimonial-card">
+        <div class="testimonial-content">
+          <p class="testimonial-text">"{{ testimonial.text }}"</p>
+        </div>
+        <div class="testimonial-author">
+          <div class="author-image">
+            <img [src]="testimonial.image" [alt]="testimonial.name">
+          </div>
+          <div class="author-info">
+            <h4>{{ testimonial.name }}</h4>
+            <p>{{ testimonial.position }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Contact me today for a free consultation and let's discuss how I can help you achieve your digital goals.</p>
+      <a routerLink="/contact" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </div>
+</section> 
